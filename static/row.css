@@ -1,0 +1,212 @@
+body {
+    background: #F5F6FA;
+}
+
+.row {
+    position: relative;
+    /* display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    grid-template-columns: 135px repeat(12, minmax(75px, auto)); */
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 9px;
+    margin: 10px 0;
+    padding: 4px 10px;
+    align-items: center;
+}
+
+.row:hover {
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.05), 0px 32px 48px -8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(32px);
+}
+
+
+.row__col--delimiter {
+    position: relative;
+    padding-right: 9px;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* .row__col--delimiter:after {
+    content: "";
+    position: absolute;
+    vertical-align: bottom;
+    height: 38px;
+    width: 1px;
+    left: 3px;
+    top: 2px;
+    /*margin-right: -100%;*/
+    /*margin-left: 10px;*/
+    /* border-left: 1px solid rgba(0, 0, 0, 0.25);
+} */ 
+.row .row__col-price:last-child {
+    display: none;
+    border-right: none;
+}
+
+.row__col-title {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    width: 125px;
+    margin-right: 15px;
+    word-wrap: break-word;
+    /* or 133% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+
+    /* Neutral/07 */
+    color: #1A1D1F;
+}
+
+.row__col-description {
+    /* Caption 1 */
+    font-family: Montserrat;
+    width: 60px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+
+    /* identical to box height, or 123% */
+    letter-spacing: -0.01em;
+
+    /* Neutral/Shades/04-75% */
+    color: #9A9FA5;
+}
+
+.row__col-price {
+    font-family: Montserrat;
+    min-width: 90px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    white-space: nowrap;
+    /* identical to box height, or 133% */
+
+    letter-spacing: -0.01em;
+
+    /* Neutral/Shade (dark)/08_over-07-50% */
+    color: rgba(17, 19, 21, 0.5);
+
+
+}
+.row__col-price .row__col--buy {
+    color: #33383F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row__col-price .row__col--sale {
+    color: rgba(17, 19, 21, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row__col--up:after {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url(img/up.svg);
+    
+
+}
+.row__col--down:after {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url(img/down.svg);
+    
+
+}
+.row .row__col:nth-last-child(-n+2) .row__col--up:after,
+.row .row__col:nth-last-child(-n+2) .row__col--down:after {
+    right: 6px;
+}
+.row-head {
+    padding: 11px;
+    display: grid;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 9px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    margin-left: 200px;
+}
+
+.row-head__item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-head__item-up {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 32px;
+    color: #6F767E;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.row-head__item-down {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.row-head__item-down-date {
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height, or 154% */
+
+    letter-spacing: -0.02em;
+
+    white-space: nowrap;
+    /* Neutral/05 */
+
+    color: #33383F;
+}
+
+.row-head__item-down-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    letter-spacing: -0.02em;
+
+    /* Neutral/04 */
+
+    color: #6F767E;
+}
+
+.row__col--buy {
+    display: block;
+    margin-bottom: 3px;
+    position: relative;
+}

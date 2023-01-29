@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="/static/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="static/fonts.css">
+    <link rel="stylesheet" href="/static/row.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+
+    <div id="app" class="all-content">
+        <header style="display: flex;justify-content: center;align-items: center;">
+            <div style="margin-right: 70px">
+                <img style="height: 60px;" src="/static/img/logo_gold_text.svg">
+            </div>
+            <h1
+                style="font-family: Montserrat;font-style: normal;font-weight: bold;line-height: 48px;letter-spacing: -0.03em;color: #272B30;">
+                Расчетные цены закупки и продажи
+            </h1>
+        </header>
+        <div class="well-table">
+            <div class="well-table__first">
+                <div class="h2">
+                    Биржевые курсы
+                </div>
+                <div class="well-items">
+                    <div class="well-item">
+                        <div class="well-item__title">Золото</div>
+                        <div class="well-item__usd">
+                            <div class="well-item__price">1 984,75</div>
+                            <div class="well-item__currency">$ usd/oz</div>
+                        </div>
+                        <div class="well-item__change  well-item__change--down ">
+                            <div>-3.45</div>
+                            <div style="display: flex;align-items: center; font-size: 12px">
+                                <svg width="16" height="16" viewBox="0 0 19 16" fill="#32CC94" stroke=" #32CC94"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke=" none"
+                                        d="M5.41039 6.5234C5.01049 6.90432 4.9951 7.5373 5.37601 7.9372C5.75693 8.3371 6.38991 8.35249 6.78981 7.97157L5.41039 6.5234ZM10.0501 3.48499L10.7398 2.7609C10.3536 2.39301 9.74661 2.39301 9.36039 2.7609L10.0501 3.48499ZM13.3104 7.97157C13.7103 8.35249 14.3433 8.3371 14.7242 7.9372C15.1051 7.5373 15.0897 6.90432 14.6898 6.5234L13.3104 7.97157ZM6.78981 7.97157L10.7398 4.20907L9.36039 2.7609L5.41039 6.5234L6.78981 7.97157ZM9.36039 4.20907L13.3104 7.97157L14.6898 6.5234L10.7398 2.7609L9.36039 4.20907Z" />
+                                    <path d="M10.05 12.515V3.48499" stroke-width=" 2" stroke-linecap="round" />
+                                </svg>
+                                <div>-0.17%</div>
+                            </div>
+                        </div>
+                        <div class="well-item__rub">
+                            <div class="well-item__price">7 658,20</div>
+                            <div class="well-item__currency">руб./грамм</div>
+                        </div>
+                    </div>
+                    <div class="well-item">
+                        <div class="well-item__title">Серебро</div>
+                        <div class="well-item__usd">
+                            <div class="well-item__price">25,88</div>
+                            <div class="well-item__currency">$ usd/oz</div>
+                        </div>
+                        <div class="well-item__change ">
+                            <div>+0.059</div>
+                            <div style="display: flex;align-items: center; font-size: 12px">
+                                <svg width="16" height="16" viewBox="0 0 19 16" fill="#32CC94" stroke="#32CC94"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke=" none"
+                                        d="M5.41039 6.5234C5.01049 6.90432 4.9951 7.5373 5.37601 7.9372C5.75693 8.3371 6.38991 8.35249 6.78981 7.97157L5.41039 6.5234ZM10.0501 3.48499L10.7398 2.7609C10.3536 2.39301 9.74661 2.39301 9.36039 2.7609L10.0501 3.48499ZM13.3104 7.97157C13.7103 8.35249 14.3433 8.3371 14.7242 7.9372C15.1051 7.5373 15.0897 6.90432 14.6898 6.5234L13.3104 7.97157ZM6.78981 7.97157L10.7398 4.20907L9.36039 2.7609L5.41039 6.5234L6.78981 7.97157ZM9.36039 4.20907L13.3104 7.97157L14.6898 6.5234L10.7398 2.7609L9.36039 4.20907Z" />
+                                    <path d="M10.05 12.515V3.48499" stroke-width=" 2" stroke-linecap="round" />
+                                </svg>
+                                <div> +0.23%</div>
+                            </div>
+                        </div>
+                        <div class="well-item__rub">
+                            <div class="well-item__price">99,84</div>
+                            <div class="well-item__currency">руб./грамм</div>
+                        </div>
+                    </div>
+                    <div class="well-item">
+                        <div class="well-item__title">Нефть</div>
+                        <div class="well-item__usd">
+                            <div class="well-item__price">114,37</div>
+                            <div class="well-item__currency">$ usd/brent</div>
+                        </div>
+                        <div class="well-item__change  ">
+                            <div>+3.23</div>
+                            <div style="display: flex;align-items: center; font-size: 12px">
+                                <svg width="16" height="16" viewBox="0 0 19 16" fill="#32CC94" stroke="#32CC94"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke=" none"
+                                        d="M5.41039 6.5234C5.01049 6.90432 4.9951 7.5373 5.37601 7.9372C5.75693 8.3371 6.38991 8.35249 6.78981 7.97157L5.41039 6.5234ZM10.0501 3.48499L10.7398 2.7609C10.3536 2.39301 9.74661 2.39301 9.36039 2.7609L10.0501 3.48499ZM13.3104 7.97157C13.7103 8.35249 14.3433 8.3371 14.7242 7.9372C15.1051 7.5373 15.0897 6.90432 14.6898 6.5234L13.3104 7.97157ZM6.78981 7.97157L10.7398 4.20907L9.36039 2.7609L5.41039 6.5234L6.78981 7.97157ZM9.36039 4.20907L13.3104 7.97157L14.6898 6.5234L10.7398 2.7609L9.36039 4.20907Z" />
+                                    <path d="M10.05 12.515V3.48499" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                                <div>+2.91%</div>
+                            </div>
+                        </div>
+                        <div class="well-item__rub">
+                            <div class="well-item__price">13 724,40</div>
+                            <div class="well-item__currency">руб./brent</div>
+                        </div>
+                    </div>
+
+                    <div class="well-item">
+                        <div class="well-item__title">Доллар USD</div>
+                        <div class="well-item__usd">
+                            <div class="well-item__price">120,00</div>
+                            <div class="well-item__currency">руб за 1 $</div>
+                        </div>
+                        <div class="well-item__change  well-item__change--down ">
+                            <div>0.0000</div>
+                            <div style="display: flex;align-items: center; font-size: 12px">
+                                <svg width="16" height="16" viewBox="0 0 19 16" fill="#32CC94" stroke="#32CC94"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke=" none"
+                                        d="M5.41039 6.5234C5.01049 6.90432 4.9951 7.5373 5.37601 7.9372C5.75693 8.3371 6.38991 8.35249 6.78981 7.97157L5.41039 6.5234ZM10.0501 3.48499L10.7398 2.7609C10.3536 2.39301 9.74661 2.39301 9.36039 2.7609L10.0501 3.48499ZM13.3104 7.97157C13.7103 8.35249 14.3433 8.3371 14.7242 7.9372C15.1051 7.5373 15.0897 6.90432 14.6898 6.5234L13.3104 7.97157ZM6.78981 7.97157L10.7398 4.20907L9.36039 2.7609L5.41039 6.5234L6.78981 7.97157ZM9.36039 4.20907L13.3104 7.97157L14.6898 6.5234L10.7398 2.7609L9.36039 4.20907Z" />
+                                    <path d="M10.05 12.515V3.48499" stroke-width=" 2" stroke-linecap="round" />
+                                </svg>
+                                <div> 0.00%</div>
+                            </div>
+                        </div>
+                        <div class="well-item__rub">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="well-table__second">
+                <div class="h2">
+                    Курс ЦБ
+                </div>
+                <div class="well-cb">
+                    <div class="well-cb__tr">
+                        <div class="well-cb__th">&nbsp;</div>
+                        <div class="well-cb__th">вчера</div>
+                        <div class="well-cb__th">сегодня</div>
+                        <div class="well-cb__th">завтра</div>
+                    </div>
+                    <div class="well-cb__tr">
+                        <div class="well-cb__td">Золото</div>
+
+
+                        <div class="well-cb__td">6 953,99</div>
+
+
+                        <div class="well-cb__td">6 612,70</div>
+
+
+                        <div class="well-cb__td">6 617,80</div>
+
+                    </div>
+                    <div class="well-cb__tr">
+                        <div class="well-cb__td">Серебро</div>
+
+                        <div class="well-cb__td">90,10</div>
+
+                        <div class="well-cb__td">86,10</div>
+
+                        <div class="well-cb__td">85,56</div>
+
+                    </div>
+                    <div class="well-cb__tr">
+                        <div class="well-cb__td">USD</div>
+
+                        <div class="well-cb__td">105,81</div>
+
+                        <div class="well-cb__td">105,81</div>
+
+                        <div class="well-cb__td">111,76</div>
+
+                    </div>
+                    <div class="well-cb__tr">
+                        <div class="well-cb__td">EUR</div>
+
+                        <div class="well-cb__td">115,62</div>
+
+                        <div class="well-cb__td">116,53</div>
+
+                        <div class="well-cb__td">124,02</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: end;">
+            <button class="btn well-table__btn" onClick="location.href=location.href">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1743_76)">
+                        <path
+                            d="M15.3438 4.92709H14.0417V1.54167C14.0417 0.966667 13.575 0.5 13 0.5C12.425 0.5 11.9584 0.966667 11.9584 1.54167V4.92709H10.6563C9.96252 4.92709 9.61356 5.76979 10.1042 6.26042L12.4479 8.60417C12.6 8.7573 12.8 8.83334 13 8.83334C13.2 8.83334 13.4 8.7573 13.5521 8.60417L15.8959 6.26042C16.3865 5.76979 16.0375 4.92709 15.3438 4.92709Z"
+                            fill="#33383F" />
+                        <path
+                            d="M16.125 13H9.87496C8.726 13 7.79163 12.0656 7.79163 10.9167V9.875C7.79163 9.3 8.25829 8.83333 8.83329 8.83333C9.40829 8.83333 9.87496 9.3 9.87496 9.875V10.9167H16.125V9.875C16.125 9.3 16.5916 8.83333 17.1666 8.83333C17.7416 8.83333 18.2083 9.3 18.2083 9.875V10.9167C18.2083 12.0656 17.2739 13 16.125 13Z"
+                            fill="#33383F" />
+                        <path
+                            d="M23.6771 4.66667H18.0083C18.276 5.35208 18.2656 6.09167 18.0083 6.75H23.4167V18.2083H2.58333V6.75H7.99166C7.73333 6.09167 7.72291 5.35208 7.99166 4.66667H2.32292C1.31771 4.66667 0.5 5.48437 0.5 6.48958V20.5521C0.5 21.5573 1.31771 22.375 2.32292 22.375H10.3C10.1771 22.8969 9.85312 23.7438 8.98541 24.6104C8.83646 24.7594 8.79166 24.9833 8.87291 25.1781C8.95312 25.3729 9.14375 25.5 9.35416 25.5H16.6458C16.8562 25.5 17.0469 25.3729 17.1271 25.1781C17.2073 24.9833 17.1625 24.7594 17.0146 24.6104C16.149 23.7448 15.8156 22.8979 15.6865 22.375H23.6771C24.6823 22.375 25.5 21.5573 25.5 20.5521V6.48958C25.5 5.48437 24.6823 4.66667 23.6771 4.66667Z"
+                            fill="#33383F" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1743_76">
+                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div> Обновить парсер</div>
+            </button>
+        </div>
+        <h3 class="title">Рачеты по Бирже</h3>
+        <div class="calculate-table">
+            <div class="calculate-table__head">
+
+                <div class="calculate-table__head-item">1/4</div>
+                <div class="calculate-table__head-item">1/10</div>
+                <div class="calculate-table__head-item">1/2</div>
+                <div class="calculate-table__head-item">1</div>
+                <div class="calculate-table__head-item">1/серебро</div>
+            </div>
+
+            <div class="calculate-table__content">
+                <div class="calculate-table__content-row" style="border-radius: 9px 0 9px 9px ">
+                    <div style="text-align: left;">
+                        Цена по весу металла
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row">
+                    <div style="text-align: left;">
+                        Цена Монеты ЦБ
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25).toFixed(2))}$
+                    </div>
+                </div>
+                <div
+                    class="calculate-table__content-row calculate-table__content-row__reload__1 calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        <div style=" color: #6F767E;font-size: 15px;line-height: 20px;padding-bottom: 15px">
+                            Расчетная цена
+                        </div>
+                        <div>1%</div>
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.01).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+
+                        1,5%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.015).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        2%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.02).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        3%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.03).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        4%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.04).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        5%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.05).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        6%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.06).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: right;">
+                        7%
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*1.07).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: left;">
+                        Шаг коррекции, руб.
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_4">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_10">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_2">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_silver_1">
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: left;">
+                        Цена после коррекции, руб.
+                    </div>
+                    <div>
+                        ${numberWithCommas(((b_gold_price*7.78*1.07)+correction_step_rub_1_4).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas(((b_gold_price*3.11*1.08)+correction_step_rub_1_10).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas(((b_gold_price*15.5*1.06)+correction_step_rub_1_2).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas(((b_gold_price*31.1*1.06)+correction_step_rub_1).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas(((b_silver_price*31.1*1.25)+correction_step_rub_silver_1).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: left;">
+                        Шаг коррекции, %
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_4">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_10">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_2">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_silver_percent_1">
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: left;">
+                        Цена после коррекции, %
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*7.78*1.07*(1+correction_step_rub_percent_1_4/100)).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*3.11*1.08*(1+correction_step_rub_percent_1_10/100)).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*15.5*1.06*(1+correction_step_rub_percent_1_2/100)).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_gold_price*31.1*1.06*(1+correction_step_rub_percent_1/100)).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((b_silver_price*31.1*1.25*(1+correction_step_rub_silver_percent_1/100)).toFixed(2))}$
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="display: flex; justify-content: end;">
+            <button class="btn" onClick="location.href=location.href">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1743_76)">
+                        <path
+                            d="M15.3438 4.92709H14.0417V1.54167C14.0417 0.966667 13.575 0.5 13 0.5C12.425 0.5 11.9584 0.966667 11.9584 1.54167V4.92709H10.6563C9.96252 4.92709 9.61356 5.76979 10.1042 6.26042L12.4479 8.60417C12.6 8.7573 12.8 8.83334 13 8.83334C13.2 8.83334 13.4 8.7573 13.5521 8.60417L15.8959 6.26042C16.3865 5.76979 16.0375 4.92709 15.3438 4.92709Z"
+                            fill="#33383F" />
+                        <path
+                            d="M16.125 13H9.87496C8.726 13 7.79163 12.0656 7.79163 10.9167V9.875C7.79163 9.3 8.25829 8.83333 8.83329 8.83333C9.40829 8.83333 9.87496 9.3 9.87496 9.875V10.9167H16.125V9.875C16.125 9.3 16.5916 8.83333 17.1666 8.83333C17.7416 8.83333 18.2083 9.3 18.2083 9.875V10.9167C18.2083 12.0656 17.2739 13 16.125 13Z"
+                            fill="#33383F" />
+                        <path
+                            d="M23.6771 4.66667H18.0083C18.276 5.35208 18.2656 6.09167 18.0083 6.75H23.4167V18.2083H2.58333V6.75H7.99166C7.73333 6.09167 7.72291 5.35208 7.99166 4.66667H2.32292C1.31771 4.66667 0.5 5.48437 0.5 6.48958V20.5521C0.5 21.5573 1.31771 22.375 2.32292 22.375H10.3C10.1771 22.8969 9.85312 23.7438 8.98541 24.6104C8.83646 24.7594 8.79166 24.9833 8.87291 25.1781C8.95312 25.3729 9.14375 25.5 9.35416 25.5H16.6458C16.8562 25.5 17.0469 25.3729 17.1271 25.1781C17.2073 24.9833 17.1625 24.7594 17.0146 24.6104C16.149 23.7448 15.8156 22.8979 15.6865 22.375H23.6771C24.6823 22.375 25.5 21.5573 25.5 20.5521V6.48958C25.5 5.48437 24.6823 4.66667 23.6771 4.66667Z"
+                            fill="#33383F" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1743_76">
+                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div> Обновить парсер</div>
+            </button>
+        </div>
+        <h3 class="title">Рачеты по ЦБ</h3>
+        <div class="calculate-table">
+            <div class="calculate-table__head">
+
+                <div class="calculate-table__head-item">1/4</div>
+                <div class="calculate-table__head-item">1/10</div>
+                <div class="calculate-table__head-item">1/2</div>
+                <div class="calculate-table__head-item">1</div>
+                <div class="calculate-table__head-item">1/серебро</div>
+            </div>
+
+            <div class="calculate-table__content">
+                <div class="calculate-table__content-row" style="border-radius: 9px 0 9px 9px ">
+                    <div style="text-align: left;">
+                        Цена по весу металла
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,7.78)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,3.11)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,15.5)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,31.1)}$
+                    </div>
+                    <div>
+                        ${callPrice(silver_price,31.1)}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row">
+                    <div style="text-align: left;">
+                        Цена Монеты ЦБ
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,7.78*1.07)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,3.11*1.08)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,15.5*1.06)}$
+                    </div>
+                    <div>
+                        ${callPrice(gold_price,31.1*1.06)}$
+                    </div>
+                    <div>
+                        ${callPrice(silver_price,31.1*1.25)}$
+                    </div>
+                </div>
+                <div
+                    class="calculate-table__content-row calculate-table__content-row__upload__1 calculate-table__content-row__upload ">
+                    <div style="text-align: right;">
+                        <div style=" color: #6F767E;font-size: 15px;line-height: 20px;padding-bottom: 15px">
+                            Расчетная цена
+                        </div>
+                        <div>1%</div>
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.01).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.01).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+
+                        1,5%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.015).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.015).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        2%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.02).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.02).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        3%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.03).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.03).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        4%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.04).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.04).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        5%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.05).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.05).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        6%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.06).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.06).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: right;">
+                        7%
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*7.78*1.07*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*3.11*1.08*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*15.5*1.06*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((gold_price*31.1*1.06*1.07).toFixed(2))}$
+                    </div>
+                    <div>
+                        ${numberWithCommas((silver_price*31.1*1.25*1.07).toFixed(2))}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: left;">
+                        Шаг коррекции, руб.
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_4">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_10">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1_2">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_1">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_silver_1">
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload ">
+                    <div style="text-align: left;">
+                        Цена после коррекции, руб.
+                    </div>
+                    <div>
+                        ${callPriceRealTime2(gold_price, correction_step_rub_1_4, 7.78*1.07)}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime2(gold_price,correction_step_rub_1_10, 3.11*1.08)}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime2(gold_price,correction_step_rub_1_2, 15.5*1.06)}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime2(gold_price,correction_step_rub_1, 31.1*1.06)}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime2(silver_price, correction_step_rub_silver_1, 31.1*1.25)}$
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__reload">
+                    <div style="text-align: left;">
+                        Шаг коррекции, %
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_4">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_10">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1_2">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_percent_1">
+                    </div>
+                    <div>
+                        <input type="text" v-model.number="correction_step_rub_silver_percent_1">
+                    </div>
+                </div>
+                <div class="calculate-table__content-row calculate-table__content-row__upload">
+                    <div style="text-align: left;">
+                        Цена после коррекции, %
+                    </div>
+                    <div>
+                        ${callPriceRealTime(gold_price,correction_step_rub_percent_1_4,
+                        7.78*1.07*(1+correction_step_rub_percent_1_4/100))}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime(gold_price, correction_step_rub_percent_1_10,
+                        3.11*1.08*(1+correction_step_rub_percent_1_10/100))}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime(gold_price,correction_step_rub_percent_1_2,
+                        15.5*1.06*(1+correction_step_rub_percent_1_2/100))}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime(gold_price,correction_step_rub_percent_1,
+                        31.1*1.06*(1+correction_step_rub_percent_1/100))}$
+                    </div>
+                    <div>
+                        ${callPriceRealTime(silver_price, correction_step_rub_silver_percent_1,
+                        31.1*1.25*(1+correction_step_rub_silver_percent_1/100)) }$
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="display: flex; justify-content: end;">
+            <button class="btn" onClick="location.href=location.href">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1743_76)">
+                        <path
+                            d="M15.3438 4.92709H14.0417V1.54167C14.0417 0.966667 13.575 0.5 13 0.5C12.425 0.5 11.9584 0.966667 11.9584 1.54167V4.92709H10.6563C9.96252 4.92709 9.61356 5.76979 10.1042 6.26042L12.4479 8.60417C12.6 8.7573 12.8 8.83334 13 8.83334C13.2 8.83334 13.4 8.7573 13.5521 8.60417L15.8959 6.26042C16.3865 5.76979 16.0375 4.92709 15.3438 4.92709Z"
+                            fill="#33383F" />
+                        <path
+                            d="M16.125 13H9.87496C8.726 13 7.79163 12.0656 7.79163 10.9167V9.875C7.79163 9.3 8.25829 8.83333 8.83329 8.83333C9.40829 8.83333 9.87496 9.3 9.87496 9.875V10.9167H16.125V9.875C16.125 9.3 16.5916 8.83333 17.1666 8.83333C17.7416 8.83333 18.2083 9.3 18.2083 9.875V10.9167C18.2083 12.0656 17.2739 13 16.125 13Z"
+                            fill="#33383F" />
+                        <path
+                            d="M23.6771 4.66667H18.0083C18.276 5.35208 18.2656 6.09167 18.0083 6.75H23.4167V18.2083H2.58333V6.75H7.99166C7.73333 6.09167 7.72291 5.35208 7.99166 4.66667H2.32292C1.31771 4.66667 0.5 5.48437 0.5 6.48958V20.5521C0.5 21.5573 1.31771 22.375 2.32292 22.375H10.3C10.1771 22.8969 9.85312 23.7438 8.98541 24.6104C8.83646 24.7594 8.79166 24.9833 8.87291 25.1781C8.95312 25.3729 9.14375 25.5 9.35416 25.5H16.6458C16.8562 25.5 17.0469 25.3729 17.1271 25.1781C17.2073 24.9833 17.1625 24.7594 17.0146 24.6104C16.149 23.7448 15.8156 22.8979 15.6865 22.375H23.6771C24.6823 22.375 25.5 21.5573 25.5 20.5521V6.48958C25.5 5.48437 24.6823 4.66667 23.6771 4.66667Z"
+                            fill="#33383F" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1743_76">
+                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div> Обновить парсер</div>
+            </button>
+        </div>
+        <h3 class="title">Сравнение с рынком</h3>
+        <div class="import">
+            <div class="tab__btn tab__active gold">Золото</div>
+            <div class="tab__btn silver">Серебро и Венская Филармония</div>
+            <div style="margin-right: 30px; margin-left: 10px;"><img src="/static/img/Group.svg">
+                <p class="import__text">Графики</p>
+            </div>
+            <div><img src="/static/img/calendar.svg">
+                <p class="import__text">Прошлые периоды</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="box header">
+                <div class="header-item header-item--1">
+                    <div class="row-head__item-up">
+                        1/4
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title">ММД</div>
+                            <div class="row-head__item-down-date">2018-2021</div>
+                        </div>
+                        <div>
+                            <div class="row-head__item-down-title">СПМД</div>
+                            <div class="row-head__item-down-date">2018-2021</div>
+                        </div>
+                        <div>
+                            <div class="row-head__item-down-title">ММД</div>
+                            <div class="row-head__item-down-date">2006-2014</div>
+                        </div>
+                        <div>
+                            <div class="row-head__item-down-title">СПМД</div>
+                            <div class="row-head__item-down-date">2006-2014</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item header-item--2">
+                    <div class="row-head__item-up">
+                        1/10
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title">СПМД</div>
+                            <div class="row-head__item-down-date">2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item header-item--3">
+                    <div class="row-head__item-up">
+                        1/2
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title">ММД</div>
+                            <div class="row-head__item-down-date">2021</div>
+                        </div>
+                        <div>
+                            <div class="row-head__item-down-title">СПМД</div>
+                            <div class="row-head__item-down-date">2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item header-item--4">
+                    <div class="row-head__item-up">
+                        1
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title">СПМД</div>
+                            <div class="row-head__item-down-date">2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item header-item--5">
+                    <div class="row-head__item-up">
+                        1
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title"
+                                style="font-weight: 600;font-size: 13px;line-height: 13px;">Венская<br>Филармония
+                            </div>
+                            <div class="row-head__item-down-date">2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-item header-item--6">
+                    <div class="row-head__item-up">
+                        1 / серебро
+                    </div>
+                    <div class="row-head__item-down">
+                        <div>
+                            <div class="row-head__item-down-title">серебро</div>
+                            <div class="row-head__item-down-date">опт</div>
+                        </div>
+                        <div>
+                            <div class="row-head__item-down-title">серебро</div>
+                            <div class="row-head__item-down-date">розница</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="row ">
+                    <div class="row__col row__col-title">
+                        Лучшая цена
+                    </div>
+                    <div class="row__col row__col-description">
+                        <div class="row__col--sale">продажа</div>
+                        <div class="row__col--buy">покупка</div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            67 500
+                        </div>
+                        <div class="row__col--sale">
+                            64 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            68 325
+                        </div>
+                        <div class="row__col--sale">
+                            64 000
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            68 325
+                        </div>
+                        <div class="row__col--sale">
+                            64 000
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            67 683
+                        </div>
+                        <div class="row__col--sale">
+                            64 974
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            27 400
+                        </div>
+                        <div class="row__col--sale">
+                            27 000
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price ">
+                        <div class="row__col--buy">
+                            89 000
+                        </div>
+                        <div class="row__col--sale">
+                            130 000
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+
+                        <div class="row__col--buy">
+                            89 000
+                        </div>
+                        <div class="row__col--sale">
+                            130 000
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy ">
+                            83 752
+                        </div>
+                        <div class="row__col--sale ">
+                            260 000
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy ">
+                            195 000
+                        </div>
+                        <div class="row__col--sale ">
+                            266 764
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy ">
+                            2 700
+                        </div>
+                        <div class="row__col--sale">
+                            3 484
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy ">
+                            3 680
+                        </div>
+                        <div class="row__col--sale ">
+                            3 387
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy ">
+                            83 752
+                        </div>
+                        <div class="row__col--sale ">
+                            260 000
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="row__col row__col-title">
+                        Золотой Инвест Клуб
+                    </div>
+                    <div class="row__col row__col-description">
+                        <div class="row__col--sale">покупка</div>
+                        <div class="row__col--buy">продажа</div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price ">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row calculate-table__content-row__reload__2 calculate-table__content-row__reload">
+                    <div class="row__col row__col-title">
+                        Шаг Коррекции
+                    </div>
+                    <div class="row__col row__col-description">
+                        <div class="row__col--sale">покупка</div>
+                        <div class="row__col--buy">продажа</div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price ">
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+
+                        <div class="row__col--buy">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy ">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale ">
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy ">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale ">
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy ">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale">
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy ">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale ">
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy ">
+                            <input type="text">
+                        </div>
+                        <div class="row__col--sale ">
+                            <input type="text">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row calculate-table__content-row__upload__2 calculate-table__content-row__upload">
+                    <div class="row__col row__col-title">
+                        Цена для выгрузки
+                    </div>
+                    <div class="row__col row__col-description">
+                        <div class="row__col--sale">покупка</div>
+                        <div class="row__col--buy">продажа</div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price ">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price row__col--delimiter">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                    <div class="row__col row__col-price">
+                        <div class="row__col--buy">
+                            39 700
+                        </div>
+                        <div class="row__col--sale">
+                            37 500
+                        </div>
+
+                    </div>
+                </div>
+                <br><br>
+                <div v-for="(company, index) in coinData">
+                    <div v-if="index==18" style="margin: 22px 0; display: flex;justify-content: center;">
+                        <div style="width: 150px; border-bottom:  1px solid rgba(0, 0, 0, 0.25);"></div>
+                    </div>
+                    <div class="row ">
+
+                        <div class="row__col row__col-title">
+                            <a :href="company.url" target="_blank" style="color: #1A1D1F;text-decoration: none;">
+                                ${company.title}$</a>
+                        </div>
+                        <div class="row__col row__col-description">
+                            <div class="row__col--buy">покупка</div>
+                            <div class="row__col--sale">продажа</div>
+                        </div>
+                        <div class="row__col row__col-price">
+                            <div :class="[company.coins.mmd_2018_2021_1_4.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                :class="[company.coins.mmd_2018_2021_1_4.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2018_2021_1_4 && checkPrice(company.coins.mmd_2018_2021_1_4.buy_price)">
+                                ${company.coins.mmd_2018_2021_1_4.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.mmd_2018_2021_1_4.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2018_2021_1_4 && checkPrice(company.coins.mmd_2018_2021_1_4.sale_price)">
+                                ${company.coins.mmd_2018_2021_1_4.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price">
+                            <div :class="[company.coins.spmd_2018_2021_1_4.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2018_2021_1_4 && checkPrice(company.coins.spmd_2018_2021_1_4.buy_price)">
+                                ${company.coins.spmd_2018_2021_1_4.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.spmd_2018_2021_1_4.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2018_2021_1_4 && checkPrice(company.coins.spmd_2018_2021_1_4.sale_price)">
+                                ${company.coins.spmd_2018_2021_1_4.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price">
+                            <div :class="[company.coins.mmd_2006_2014_1_4.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2006_2014_1_4 && checkPrice(company.coins.mmd_2006_2014_1_4.buy_price)">
+                                ${company.coins.mmd_2006_2014_1_4.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.mmd_2006_2014_1_4.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2006_2014_1_4 && checkPrice(company.coins.mmd_2006_2014_1_4.sale_price)">
+                                ${company.coins.mmd_2006_2014_1_4.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.spmd_2006_2014_1_4.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2006_2014_1_4 && checkPrice(company.coins.spmd_2006_2014_1_4.buy_price)">
+                                ${company.coins.spmd_2006_2014_1_4.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.spmd_2006_2014_1_4.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2006_2014_1_4 && checkPrice(company.coins.spmd_2006_2014_1_4.sale_price)">
+                                ${company.coins.spmd_2006_2014_1_4.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.spmd_2021_1_10.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1_10 && checkPrice(company.coins.spmd_2021_1_10.buy_price)">
+                                ${company.coins.spmd_2021_1_10.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.spmd_2021_1_10.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1_10 && checkPrice(company.coins.spmd_2021_1_10.sale_price)">
+                                ${company.coins.spmd_2021_1_10.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price ">
+                            <div :class="[company.coins.mmd_2021_1_2.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2021_1_2 && checkPrice(company.coins.mmd_2021_1_2.buy_price)">
+                                ${company.coins.mmd_2021_1_2.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.mmd_2021_1_2.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.mmd_2021_1_2 && checkPrice(company.coins.mmd_2021_1_2.sale_price)">
+                                ${company.coins.mmd_2021_1_2.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.spmd_2021_1_2.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1_2 && checkPrice(company.coins.spmd_2021_1_2.buy_price)">
+                                ${company.coins.spmd_2021_1_2.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.spmd_2021_1_2.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1_2 && checkPrice(company.coins.spmd_2021_1_2.sale_price)">
+                                ${company.coins.spmd_2021_1_2.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.spmd_2021_1.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1 && checkPrice(company.coins.spmd_2021_1.buy_price)">
+                                ${company.coins.spmd_2021_1.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.spmd_2021_1.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.spmd_2021_1 && checkPrice(company.coins.spmd_2021_1.sale_price)">
+                                ${company.coins.spmd_2021_1.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.vf_2012_2021_1.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.vf_2012_2021_1 && checkPrice(company.coins.vf_2012_2021_1.buy_price)">
+                                ${company.coins.vf_2012_2021_1.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.vf_2012_2021_1.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.vf_2012_2021_1  && checkPrice(company.coins.vf_2012_2021_1.sale_price)">
+                                ${company.coins.vf_2012_2021_1.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price">
+                            <div :class="[company.coins.silver_wholesale_1.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.silver_wholesale_1 && checkPrice(company.coins.silver_wholesale_1.buy_price)">
+                                ${company.coins.silver_wholesale_1.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.silver_wholesale_1.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.silver_wholesale_1 && checkPrice(company.coins.silver_wholesale_1.sale_price)">
+                                ${company.coins.silver_wholesale_1.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price">
+                            <div :class="[company.coins.silver_retail_1.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.silver_retail_1 && checkPrice(company.coins.silver_retail_1.buy_price)">
+                                ${company.coins.silver_retail_1.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.silver_retail_1.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.silver_retail_1 && checkPrice(company.coins.silver_retail_1.sale_price)">
+                                ${company.coins.silver_retail_1.sale_price}$
+                            </div>
+                            <div class="row__col--buy " v-else>-</div>
+                        </div>
+                        <div class="row__col row__col-price row__col--delimiter">
+                            <div :class="[company.coins.vf_2012_2021_1.buy_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.vf_2012_2021_1 && checkPrice(company.coins.vf_2012_2021_1.buy_price)">
+                                ${company.coins.vf_2012_2021_1.buy_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                            <div :class="[company.coins.vf_2012_2021_1.sale_is_up ? 'row__col--up' : 'row__col--down', 'row__col--buy']"
+                                v-if="company.coins.vf_2012_2021_1  && checkPrice(company.coins.vf_2012_2021_1.sale_price)">
+                                ${company.coins.vf_2012_2021_1.sale_price}$
+                            </div>
+                            <div class="row__col--buy" v-else>-</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="import">
+            <div class="tab__btn tab__active gold">Золото</div>
+            <div class="tab__btn silver">Серебро и Венская Филармония</div>
+            <div><img src="/static/img/Group.svg">
+                <p class="import__text">Графики</p>
+            </div>
+            <div><img src="/static/img/calendar.svg">
+                <p class="import__text">Прошлые периоды</p>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: end; margin-bottom: 50px;">
+            <button class="btn" onClick="location.href=location.href">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1743_76)">
+                        <path
+                            d="M15.3438 4.92709H14.0417V1.54167C14.0417 0.966667 13.575 0.5 13 0.5C12.425 0.5 11.9584 0.966667 11.9584 1.54167V4.92709H10.6563C9.96252 4.92709 9.61356 5.76979 10.1042 6.26042L12.4479 8.60417C12.6 8.7573 12.8 8.83334 13 8.83334C13.2 8.83334 13.4 8.7573 13.5521 8.60417L15.8959 6.26042C16.3865 5.76979 16.0375 4.92709 15.3438 4.92709Z"
+                            fill="#33383F" />
+                        <path
+                            d="M16.125 13H9.87496C8.726 13 7.79163 12.0656 7.79163 10.9167V9.875C7.79163 9.3 8.25829 8.83333 8.83329 8.83333C9.40829 8.83333 9.87496 9.3 9.87496 9.875V10.9167H16.125V9.875C16.125 9.3 16.5916 8.83333 17.1666 8.83333C17.7416 8.83333 18.2083 9.3 18.2083 9.875V10.9167C18.2083 12.0656 17.2739 13 16.125 13Z"
+                            fill="#33383F" />
+                        <path
+                            d="M23.6771 4.66667H18.0083C18.276 5.35208 18.2656 6.09167 18.0083 6.75H23.4167V18.2083H2.58333V6.75H7.99166C7.73333 6.09167 7.72291 5.35208 7.99166 4.66667H2.32292C1.31771 4.66667 0.5 5.48437 0.5 6.48958V20.5521C0.5 21.5573 1.31771 22.375 2.32292 22.375H10.3C10.1771 22.8969 9.85312 23.7438 8.98541 24.6104C8.83646 24.7594 8.79166 24.9833 8.87291 25.1781C8.95312 25.3729 9.14375 25.5 9.35416 25.5H16.6458C16.8562 25.5 17.0469 25.3729 17.1271 25.1781C17.2073 24.9833 17.1625 24.7594 17.0146 24.6104C16.149 23.7448 15.8156 22.8979 15.6865 22.375H23.6771C24.6823 22.375 25.5 21.5573 25.5 20.5521V6.48958C25.5 5.48437 24.6823 4.66667 23.6771 4.66667Z"
+                            fill="#33383F" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1743_76">
+                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div> Обновить парсер</div>
+            </button>
+        </div>
+
+    </div>
+    <script defer>
+
+        var coinData = [{
+            "title": "Монета Инвест МСК",
+            "url": "https://msk.monetainvest.ru/",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "80 000",
+                    "sale_price": "55 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "79 000",
+                    "sale_price": "55 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "55 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "79 000",
+                    "sale_price": "55 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2021_1_2": { "buy_price": "0", "sale_price": "80 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "80 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "225 660", "buy_is_up": true, "sale_is_up": false },
+                "vf_2012_2021_1": {
+                    "buy_price": "282 670",
+                    "sale_price": "225 660",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_retail_1": { "buy_price": "0", "sale_price": "2 100", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Аурумекс",
+            "url": "https://aurumex.ru/#top10",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "68 500",
+                    "sale_price": "52 100",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "68 325",
+                    "sale_price": "51 875",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "68 325",
+                    "sale_price": "51 875",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "67 800",
+                    "sale_price": "51 300",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2021_1_10": { "buy_price": "27 400", "sale_price": "20 300", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1_2": { "buy_price": "136 650", "sale_price": "103 750", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "273 300", "sale_price": "207 500", "buy_is_up": false, "sale_is_up": false },
+                "silver_retail_1": { "buy_price": "3 680", "sale_price": "2 500", "buy_is_up": true, "sale_is_up": false }
+            }
+        }, {
+            "title": "Золотые Деньги",
+            "url": "https://mosgoldenmoney.ru",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "67 500",
+                    "sale_price": "52 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": { "buy_price": "85 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": false },
+                "mmd_2006_2014_1_4": { "buy_price": "85 500", "sale_price": "0", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2006_2014_1_4": { "buy_price": "84 500", "sale_price": "0", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "320 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": false },
+                "vf_2012_2021_1": { "buy_price": "320 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "2", "sale_price": "2 650", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Золотой Монетный Двор",
+            "url": "https://www.zolotoydvor.ru",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "79 000",
+                    "sale_price": "57 000",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "78 000",
+                    "sale_price": "56 000",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "78 000",
+                    "sale_price": "56 000",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "32 000", "sale_price": "23 000", "buy_is_up": true, "sale_is_up": true },
+                "mmd_2021_1_2": { "buy_price": "158 000", "sale_price": "114 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "156 000", "sale_price": "112 000", "buy_is_up": false, "sale_is_up": true },
+                "vf_2012_2021_1": {
+                    "buy_price": "282 530",
+                    "sale_price": "245 680",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_retail_1": { "buy_price": "5 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Slitok.Gold",
+            "url": "https://slitok.gold/catalog/monetyi/rossijskie-monetyi?available=0",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "85 000",
+                    "sale_price": "61 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "84 000",
+                    "sale_price": "60 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "36 800", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "41 464", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "163 531", "sale_price": "128 620", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "323 387", "sale_price": "262 140", "buy_is_up": true, "sale_is_up": true },
+                "silver_wholesale_1": { "buy_price": "4 276", "sale_price": "3 484", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 751", "sale_price": "3 168", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Ланта Банк",
+            "url": "https://www.lanta.ru/metals/coins/",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "0",
+                    "sale_price": "40 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "75 000",
+                    "sale_price": "39 000",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                },
+                "spmd_2021_1_10": { "buy_price": "35 000", "sale_price": "23 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "146 000", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 500", "sale_price": "2 900", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "J&T банк",
+            "url": "https://jtbank.ru/fizicheskim-litsam/monety/",
+            "coins": { "silver_retail_1": { "buy_price": "4 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": true } }
+        }, {
+            "title": "Золото Инвест", "url": "https://zoloto-invest.com", "coins": {
+                "mmd_2018_2021_1_4": { "buy_price": "71 000", "sale_price": "59 500", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "71 000",
+                    "sale_price": "59 500",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "57 500", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "57 000", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2021_1_10": { "buy_price": "0", "sale_price": "22 500", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "119 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "238 000", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "310 800", "sale_price": "248 100", "buy_is_up": true, "sale_is_up": true },
+                "silver_wholesale_1": { "buy_price": "4 000", "sale_price": "2 800", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 050", "sale_price": "2 800", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Золотой Запас", "url": "https://www.zolotoy-zapas.ru", "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "80 500",
+                    "sale_price": "64 500",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "80 000",
+                    "sale_price": "64 000",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "80 000",
+                    "sale_price": "64 000",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "79 000",
+                    "sale_price": "63 000",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2021_1_10": { "buy_price": "0", "sale_price": "27 000", "buy_is_up": false, "sale_is_up": true },
+                "mmd_2021_1_2": { "buy_price": "160 000", "sale_price": "130 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "160 000", "sale_price": "130 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "260 000", "buy_is_up": false, "sale_is_up": true },
+                "vf_2012_2021_1": {
+                    "buy_price": "284 600",
+                    "sale_price": "237 200",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_wholesale_1": {
+                    "buy_price": "4 095",
+                    "sale_price": "2 925",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_retail_1": { "buy_price": "4 160", "sale_price": "2 925", "buy_is_up": false, "sale_is_up": false }
+            }
+        }, {
+            "title": "Держава",
+            "url": "https://9999d.ru/",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "72 000",
+                    "sale_price": "48 000",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "71 000",
+                    "sale_price": "47 000",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "71 000",
+                    "sale_price": "47 000",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "69 000",
+                    "sale_price": "46 000",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                },
+                "spmd_2021_1_2": { "buy_price": "143 000", "sale_price": "95 000", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "285 000", "sale_price": "193 000", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "195 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 100", "sale_price": "2 700", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_10": { "buy_price": "28 000", "sale_price": "19 000", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Золотой Монетный Дом", "url": "https://zoloto-md.ru", "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "82 950",
+                    "sale_price": "63 616",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2018_2021_1_4": { "buy_price": "0", "sale_price": "0", "buy_is_up": false, "sale_is_up": false },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "82 014",
+                    "sale_price": "63 616",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "82 014",
+                    "sale_price": "63 616",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2021_1_10": { "buy_price": "36 150", "sale_price": "25 181", "buy_is_up": false, "sale_is_up": false },
+                "mmd_2021_1_2": { "buy_price": "180 752", "sale_price": "125 903", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1_2": { "buy_price": "180 752", "sale_price": "125 903", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "83 752", "sale_price": "249 313", "buy_is_up": true, "sale_is_up": false },
+                "vf_2012_2021_1": {
+                    "buy_price": "326 599",
+                    "sale_price": "266 764",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_wholesale_1": { "buy_price": "0", "sale_price": "0", "buy_is_up": false, "sale_is_up": false },
+                "silver_retail_1": { "buy_price": "5 160", "sale_price": "3 387", "buy_is_up": false, "sale_is_up": false }
+            }
+        }, {
+            "title": "Золотой Департамент",
+            "url": "https://golddep.ru/",
+            "coins": {
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "68 593",
+                    "sale_price": "53 583",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "67 683",
+                    "sale_price": "52 570",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "vf_2012_2021_1": { "buy_price": "280 226", "sale_price": "212 428", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Coins.tsbnk",
+            "url": "https://coins.tsbnk.ru/",
+            "coins": {
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "85 000",
+                    "sale_price": "30 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "85 000",
+                    "sale_price": "30 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "0", "sale_price": "0", "buy_is_up": false, "sale_is_up": true },
+                "mmd_2021_1_2": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "340 000", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 500", "sale_price": "0", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Мосдрагмет",
+            "url": "https://mosdragmet.ru/vse-moneti/investicionnye-monety/zolotye-investicionnye-monety.html",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "79 000",
+                    "sale_price": "62 000",
+                    "buy_is_up": false,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "82 000",
+                    "sale_price": "61 500",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2006_2014_1_4": { "buy_price": "78 500", "sale_price": "0", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_10": { "buy_price": "31 000", "sale_price": "23 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "164 000", "sale_price": "125 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "250 000", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "0", "sale_price": "257 000", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 300", "sale_price": "2 400", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Россельхозбанк",
+            "url": "https://coins.rshb.ru/?country=5496&metal_name=5498&metal_name=5499&subjects=5506",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "70 000",
+                    "sale_price": "44 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "70 000",
+                    "sale_price": "44 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "28 000", "sale_price": "16 500", "buy_is_up": true, "sale_is_up": true },
+                "mmd_2021_1_2": { "buy_price": "89 000", "sale_price": "89 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "89 000", "sale_price": "89 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "134 500", "sale_price": "134 500", "buy_is_up": false, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 300", "sale_price": "2 050", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Внешфинбанк",
+            "url": "https://www.vfbank.ru/fizicheskim-licam/monety/",
+            "coins": {
+                "mmd_2018_2021_1_4": { "buy_price": "0", "sale_price": "0", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "80 000",
+                    "sale_price": "60 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "40 000", "sale_price": "20 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "310 000", "sale_price": "240 000", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "0", "sale_price": "240 000", "buy_is_up": false, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 850", "sale_price": "2 600", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Банк Уралсиб",
+            "url": "https://www.uralsib.ru/investments-and-insurance/ivestitsii/invest-money/",
+            "coins": {
+                "mmd_2018_2021_1_4": { "buy_price": "8 500", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2018_2021_1_4": { "buy_price": "8 500", "sale_price": "0", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_10": { "buy_price": "8 500", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "8 500", "sale_price": "0", "buy_is_up": false, "sale_is_up": true }
+            }
+        }, {
+            "title": "Банк Глобус",
+            "url": "https://www.globus-coins.ru/shop/",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "0",
+                    "sale_price": "50 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "77 000",
+                    "sale_price": "48 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "76 000",
+                    "sale_price": "48 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 900", "sale_price": "2 600", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Сбербанк",
+            "url": "https://www.sberbank.ru/ru/person/investments/values/mon#/page/1/search?met1&met2&cat4",
+            "coins": {
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "51 310",
+                    "sale_price": "41 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                }, "silver_retail_1": { "buy_price": "3 500", "sale_price": "2 600", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Золото в руки",
+            "url": "https://zolotovruki.ru/%d0%b8%d0%bd%d0%b2%d0%b5%d1%81%d1%82%d0%b8%d1%86%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b5-%d0%bc%d0%be%d0%bd%d0%b5%d1%82%d1%8b/",
+            "coins": {
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "0",
+                    "sale_price": "59 900",
+                    "buy_is_up": true,
+                    "sale_is_up": false
+                }, "mmd_2021_1_2": { "buy_price": "0", "sale_price": "0", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Петроинвест СПБ", "url": "http://petroinvest.ru/catalog/", "coins": {
+                "mmd_2018_2021_1_4": { "buy_price": "0", "sale_price": "61 334", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2018_2021_1_4": { "buy_price": "0", "sale_price": "0", "buy_is_up": false, "sale_is_up": false },
+                "mmd_2006_2014_1_4": {
+                    "buy_price": "72 150",
+                    "sale_price": "53 919",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "spmd_2006_2014_1_4": {
+                    "buy_price": "78 000",
+                    "sale_price": "64 974",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2021_1_10": { "buy_price": "30 800", "sale_price": "21 467", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1_2": { "buy_price": "156 350", "sale_price": "109 039", "buy_is_up": true, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "287 750", "sale_price": "220 126", "buy_is_up": false, "sale_is_up": false },
+                "vf_2012_2021_1": { "buy_price": "316 650", "sale_price": "263 573", "buy_is_up": true, "sale_is_up": true },
+                "silver_wholesale_1": { "buy_price": "4 250", "sale_price": "3 294", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 400", "sale_price": "3 137", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Тройский стандарт СПБ", "url": "https://troystandart.ru/", "coins": {
+                "mmd_2018_2021_1_4": { "buy_price": "78 000", "sale_price": "62 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2018_2021_1_4": {
+                    "buy_price": "77 000",
+                    "sale_price": "62 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "mmd_2006_2014_1_4": { "buy_price": "78 000", "sale_price": "62 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "62 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_10": { "buy_price": "0", "sale_price": "23 500", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_2": { "buy_price": "0", "sale_price": "118 000", "buy_is_up": true, "sale_is_up": true },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "236 000", "buy_is_up": false, "sale_is_up": true },
+                "vf_2012_2021_1": { "buy_price": "0", "sale_price": "215 000", "buy_is_up": false, "sale_is_up": true },
+                "silver_wholesale_1": { "buy_price": "2 700", "sale_price": "1 900", "buy_is_up": true, "sale_is_up": true },
+                "silver_retail_1": { "buy_price": "4 100", "sale_price": "1 900", "buy_is_up": true, "sale_is_up": true }
+            }
+        }, {
+            "title": "Монета Ивест СПБ",
+            "url": "https://monetainvest.ru/",
+            "coins": {
+                "mmd_2018_2021_1_4": {
+                    "buy_price": "75 000",
+                    "sale_price": "62 000",
+                    "buy_is_up": true,
+                    "sale_is_up": true
+                },
+                "spmd_2018_2021_1_4": { "buy_price": "0", "sale_price": "62 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2006_2014_1_4": { "buy_price": "0", "sale_price": "60 000", "buy_is_up": false, "sale_is_up": true },
+                "spmd_2021_1_10": { "buy_price": "28 510", "sale_price": "21 380", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1_2": { "buy_price": "137 770", "sale_price": "106 890", "buy_is_up": false, "sale_is_up": false },
+                "spmd_2021_1": { "buy_price": "0", "sale_price": "213 790", "buy_is_up": false, "sale_is_up": false },
+                "vf_2012_2021_1": {
+                    "buy_price": "280 300",
+                    "sale_price": "216 160",
+                    "buy_is_up": false,
+                    "sale_is_up": false
+                },
+                "silver_retail_1": { "buy_price": "4 300", "sale_price": "2 450", "buy_is_up": true, "sale_is_up": true }
+            }
+        }];
+        Vue.createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    gold_price: 6617.80,
+                    silver_price: 85.56,
+                    b_gold_price: this.strToFloat("7 658,20"),
+                    b_silver_price: this.strToFloat("99,84"),
+                    correction_step_rub_1_4: null,
+                    correction_step_rub_1_10: null,
+                    correction_step_rub_1_2: null,
+                    correction_step_rub_1: null,
+                    correction_step_rub_silver_1: null,
+                    correction_step_rub_percent_1_4: null,
+                    correction_step_rub_percent_1_10: null,
+                    correction_step_rub_percent_1_2: null,
+                    correction_step_rub_percent_1: null,
+                    correction_step_rub_silver_percent_1: null,
+
+                    coinData: coinData
+                }
+            },
+            methods: {
+                callPrice(price, multiplier) {
+                    if (Number(price) === price) {
+                        return this.numberWithCommas((price * multiplier).toFixed(2));
+                    }
+                    return "-";
+                },
+                callPriceRealTime(price, price2, multiplier) {
+                    if (Number(price) === price && Number(price2) === price2) {
+                        return this.numberWithCommas((price * multiplier).toFixed(2));
+                    }
+                    return "-";
+                },
+                callPriceRealTime2(price, price2, multiplier) {
+                    if (Number(price) === price && Number(price2) === price2) {
+                        return this.numberWithCommas((price * multiplier + price2).toFixed(2));
+                    }
+                    return "-";
+                },
+                numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ").replaceAll('.', ',');
+                },
+                strToFloat(price) {
+                    return parseFloat(price.replaceAll(",", '.').replace(/[^\d.]/g, ''));
+                },
+                checkPrice(price) {
+                    let int_price = parseFloat(price.replaceAll(",", '.').replace(/[^\d.]/g, ''))
+                    return int_price > 10;
+                }
+
+            },
+            compilerOptions: {
+                delimiters: ["${", "}$"]
+            }
+        }).mount('#app')
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
